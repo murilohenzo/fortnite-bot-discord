@@ -1,4 +1,4 @@
-from request import FortniteClient
+﻿from request import FortniteClient
 import discord
 import os
 from dotenv import load_dotenv
@@ -19,7 +19,7 @@ async def on_message(message):
     if message.content.startswith(COMMAND_PREFIX + 'help'):
         await message.channel.send(
             'Este bot é alimentado pela API gratuita do Fortnite Tracker, que fornece estatísticas vitalícias para jogadores no PC, Xbox ou PS4.' + '\n`Comandos`\n' +
-            '`/stats <platform> <nickname>` recuperar estatísticas em geral.\n' + '`/statsmode <platform> <nickname> <mode>` recuperar estatísticas para modo específico.\n'
+            '`/stats <platform> <nickname>` recuperar estatísticas em geral.\n' + '`/statusmode <platform> <nickname> <mode>` recuperar estatísticas para modo específico.\n'
             + '`/recentmatch <platform> <nickname>` recuperar estatístcas de partidas recentes.')
     elif message.content.startswith(COMMAND_PREFIX + 'stats'):
         words = message.content.split(' ', 2)
