@@ -1,12 +1,16 @@
 import json
 import re
+import os
 import requests
 from humanize_datetime import Humanize
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class FortniteClient(object):
 
     api_url = 'https://api.fortnitetracker.com/v1/profile/'
-    api_token = 'c5e177c2-1263-4286-9e69-e738e98870ba'
+    api_token = os.getenv('API_TOKEN_FORTNITE')
 
     headers = {'Content-Type': 'application/json',
                'TRN-Api-Key': api_token
